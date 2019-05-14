@@ -44,7 +44,7 @@ Template["dapp_selectAccount"].helpers({
     @method (isNotPuffsUnit)
     */
   isNotPuffsUnit: function() {
-    return EthTools.getUnit().toLowerCase() !== "puffs";
+    return PuffsTools.getUnit().toLowerCase() !== "puffs";
   },
   /**
     Check if the current selected unit is not puffscoin
