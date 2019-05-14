@@ -1,14 +1,14 @@
-# Ethereum elements
+# PUFFScoin elements
 
 A collection of basic Meteor templates/components to make dapps faster to build.
 
-Its recommended to use these elements along with the [Ðapp styles](https://github.com/ethereum/dapp-styles).
+Its recommended to use these elements along with the [Ðapp styles](https://github.com/puffscoin/dapp-styles).
 
 You can find a [demo here](http://ethereum-elements.meteor.com).
 
 ## Installation
 
-    $ meteor add ethereum:elements
+    $ meteor add puffscoin:elements
 
 ## Usage
 
@@ -16,17 +16,17 @@ The following elements can be use anywhere in your dapp.
 
 Additionally this package exposes the following packages:
 
-* [ethereum:tools](https://atmospherejs.com/ethereum/tools), which gives you `EthTools`.
+* [puffscoin:tools](https://atmospherejs.com/ethereum/tools), which gives you `EthTools`.
 * [frozeman:template-var](https://atmospherejs.com/frozeman/template-var), which gives you the `TemplateVar.set()/.get()` functions which can be used to get values from the select account, or address input element.
 
 Note that these packages will only be exposed to your client part of your dapp,
-if you want to use e.g. `EthTools` on the server side add the package manually using `$ meteor add ethereum:tools`.
+if you want to use e.g. `EthTools` on the server side add the package manually using `$ meteor add puffscoin:tools`.
 
 ---
 
 ### Identicon
 
-![identicon](https://raw.githubusercontent.com/ethereum/meteor-package-elements/master/screenshots/identicon.png)
+![identicon](https://raw.githubusercontent.com/puffscoin/meteor-package-elements/master/screenshots/identicon.png)
 
 Shows an identicon.
 
@@ -46,7 +46,7 @@ Additionally you can provide a URL, which the identicon will link to.
 
 ### Address Input
 
-![addressInput](https://raw.githubusercontent.com/ethereum/meteor-package-elements/master/screenshots/addressInput.png)
+![addressInput](https://raw.githubusercontent.com/puffscoin/meteor-package-elements/master/screenshots/addressInput.png)
 
 Creates a input field, with an identicon, which will change based on the input value.
 
@@ -89,7 +89,7 @@ TemplateVar.getFrom('.my-container-element .dapp-address-input', 'value');
 
 ### Data Textarea
 
-![dataTextarea](https://raw.githubusercontent.com/ethereum/meteor-package-elements/master/screenshots/dataTextarea.png)
+![dataTextarea](https://raw.githubusercontent.com/puffscoin/meteor-package-elements/master/screenshots/dataTextarea.png)
 
 Creates a textarea field, which only accepts HEX data as input.
 
@@ -132,8 +132,8 @@ TemplateVar.getFrom('.my-container-element .dapp-data-textarea', 'value');
 
 ### Select account
 
-![select account](https://raw.githubusercontent.com/ethereum/meteor-package-elements/master/screenshots/selectAccount.png)
-![select account clicked](https://raw.githubusercontent.com/ethereum/meteor-package-elements/master/screenshots/selectAccount1.png)
+![select account](https://raw.githubusercontent.com/puffscoin/meteor-package-elements/master/screenshots/selectAccount.png)
+![select account clicked](https://raw.githubusercontent.com/puffscoin/meteor-package-elements/master/screenshots/selectAccount1.png)
 
 Creates a select, which can allow to select accounts. The provided array needs to have at least the follwing properties:
 
