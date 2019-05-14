@@ -192,7 +192,7 @@ TemplateVar.getFrom('.my-container-element .dapp-select-account', 'value');
 
 ### Gas price selection
 
-![select gas price](https://raw.githubusercontent.com/ethereum/meteor-package-elements/master/screenshots/selectGasPrice.png?1)
+![select gas price](https://raw.githubusercontent.com/puffscoin/meteor-package-elements/master/screenshots/selectGasPrice.png?1)
 
 This element allows you users to adjust the fee (gas \* gas price) of a transaction, and gives you back either the `gasInWei` or the selected `gasPrice`.
 
@@ -220,7 +220,7 @@ TemplateVar.getFrom('.my-container-element .dapp-select-gas-price', 'gasPrice');
 // or the total fee when providing a estimated gas usage of 21000
 
 TemplateVar.getFrom('.my-container-element .dapp-select-gas-price', 'gasInWei');
-// "1181427240063000" which is "0.001181427240063" ether
+// "1181427240063000" which is "0.001181427240063" puffs
 
 // or when used in an event
 'change .dapp-select-gas-price input': function(e) {
@@ -237,7 +237,7 @@ If the `TAPi18n` helper is available it will use `TAPi18n.__('elements.selectGas
 
 ### Modals
 
-![modal](https://raw.githubusercontent.com/ethereum/meteor-package-elements/master/screenshots/modal.png?2)
+![modal](https://raw.githubusercontent.com/puffscoin/meteor-package-elements/master/screenshots/modal.png?2)
 
 Just place a modal placeholder before the closing body tag.
 
@@ -250,11 +250,11 @@ Just place a modal placeholder before the closing body tag.
 Render the modal:
 
 ```js
-EthElements.Modal.show("myContentTemplate");
+PuffsElements.Modal.show("myContentTemplate");
 
 // Or
 
-EthElements.Modal.show({
+PuffsElements.Modal.show({
   template: "myContentTemplate",
   data: {
     myData: "some data"
@@ -268,7 +268,7 @@ Additional options:
 * `class` - A class, which will be add to the modal section element
 
 ```js
-EthElements.Modal.show("myContentTemplate", {
+PuffsElements.Modal.show("myContentTemplate", {
   closeable: false,
   class: "my-modal-class"
 });
@@ -278,13 +278,13 @@ Navigate to a path on close.
 This will only work when the [kadira:flow-router](https://atmospherejs.com/kadira/flow-router) or [iron:router](https://atmospherejs.com/iron/router) package is installed:
 
 ```js
-EthElements.Modal.show("myContentTemplate", { closePath: "/dashboard" });
+PuffsElements.Modal.show("myContentTemplate", { closePath: "/dashboard" });
 ```
 
 #### Close modal
 
 ```js
-EthElements.Modal.hide();
+PuffsElements.Modal.hide();
 ```
 
 ---
@@ -303,7 +303,7 @@ Additional you can:
 * Pass `false` or leave the `ok` or `cancel` property empty and it won't show that buttons.
 
 ```js
-EthElements.Modal.question({
+PuffsElements.Modal.question({
   text: "Do you want to ...",
   ok: function() {
     // do something on ok
@@ -317,7 +317,7 @@ EthElements.Modal.question({
 Instead of passing a text you can also pass a template, which will be shown above the ok/cancel buttons
 
 ```js
-EthElements.Modal.question({
+PuffsElements.Modal.question({
   template: "myTemplate",
   data: {
     my: "template data"
@@ -340,7 +340,7 @@ EthElements.Modal.hide();
 Additional you can pass the same options as the modal as the second parameter:
 
 ```js
-EthElements.Modal.question(
+PuffsElements.Modal.question(
   {
     text: "Alright?",
     ok: function() {
