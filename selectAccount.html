@@ -6,8 +6,8 @@
                     {{#if isAccount}}🔑{{/if}} {{name}}
                     {{#if balance}}
                         - {{dapp_formatBalance balance "0,0.00 UNIT"}}
-                        {{#if isNotEtherUnit}}
-                            ({{dapp_formatBalance balance "0,0.00 UNIT" "ether"}})
+                        {{#if isNotPuffsUnit}}
+                            ({{dapp_formatBalance balance "0,0.00 UNIT" "puffs"}})
                         {{/if}}
                     {{/if}}
                 </option>
