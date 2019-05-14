@@ -11,7 +11,7 @@ Helper elements for puffscoin dapps
 @constructor
 */
 
-EthElements = {
+PuffsElements = {
   Modal: {
     _current: new ReactiveVar(),
     /**
@@ -48,7 +48,7 @@ EthElements = {
         @param {Object} options the options for the modal like `{closeable: true, closePath: '/dahsboard'}`
         */
     question: function(data, options) {
-      EthElements.Modal.show(
+      PuffsElements.Modal.show(
         {
           template: "dapp_modal_question",
           data: data
