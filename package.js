@@ -27,7 +27,7 @@ Package.onUse(function(api) {
   // provide packages for the app developer as well
   api.imply(["frozeman:template-var", "puffscoin:tools"], "client");
 
-  api.export(["EthElements"], "client");
+  api.export(["PuffsElements"], "client");
 
   api.addAssets("identicon-load.gif", "client");
 
@@ -36,7 +36,7 @@ Package.onUse(function(api) {
   api.addFiles("elements.import.less", "client");
   api.addFiles("main.less", "client");
 
-  api.addFiles("ethelements.js", "client");
+  api.addFiles("puffselements.js", "client");
 
   api.addFiles("identicon.html", "client");
   api.addFiles("identicon.js", "client");
