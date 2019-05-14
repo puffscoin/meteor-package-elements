@@ -16,11 +16,11 @@ The following elements can be use anywhere in your dapp.
 
 Additionally this package exposes the following packages:
 
-* [puffscoin:tools](https://atmospherejs.com/ethereum/tools), which gives you `EthTools`.
-* [frozeman:template-var](https://atmospherejs.com/frozeman/template-var), which gives you the `TemplateVar.set()/.get()` functions which can be used to get values from the select account, or address input element.
+* [puffscoin:tools](https://github.com/puffscoin/meteor-package-tools), which gives you `PuffsTools`.
+* [frozeman:template-var](https://github.com/puffscoin/meteor-template-var), which gives you the `TemplateVar.set()/.get()` functions which can be used to get values from the select account, or address input element.
 
 Note that these packages will only be exposed to your client part of your dapp,
-if you want to use e.g. `EthTools` on the server side add the package manually using `$ meteor add puffscoin:tools`.
+if you want to use e.g. `PuffsTools` on the server side add the package manually using `$ meteor add puffscoin:tools`.
 
 ---
 
@@ -157,7 +157,7 @@ var myAccounts = [
 {{> dapp_selectAccount accounts=myAccounts}}
 ```
 
-This element works also well with the [ethereum:accounts](https://atmospherejs.com/ethereum/accounts) package, which provides you with `EthAccounts.find().fetch()` to get all current accounts.
+This element works also well with the [puffscoin:accounts](https://github.com/puffscoin/meteor-package-accounts) package, which provides you with `PuffsAccounts.find().fetch()` to get all current accounts.
 
 **Setting size**
 
@@ -169,7 +169,7 @@ By passing `class="dapp-large"` you can have a larger version of the select box:
 
 **Show icon**
 
-If you add the `showAccountTypes=true` property it will show a key unicode icon for all accounts with the `type='account'` property (set for `EthAccounts` accounts).
+If you add the `showAccountTypes=true` property it will show a key unicode icon for all accounts with the `type='account'` property (set for `PuffsAccounts` accounts).
 
 ```html
 {{> dapp_selectAccount accounts=myAccounts showAccountTypes=true}}
@@ -201,13 +201,13 @@ and the tool will display whats the current medium gas price based on the given 
 
 The user then can adjust the fee up and down by a factor of ~1.8.
 
-_Hint_: To get the gas price reactivly you can use the [ethereum:blocks](https://atmospherejs.com/ethereum/blocks) package's `EthBlocks.latest.gasPrice` and pass it to the `gasPrice` property.
+_Hint_: To get the gas price reactivly you can use the [puffscoin:blocks](https://github.com/puffscoin/meteor-package-blocks) package's `PuffsBlocks.latest.gasPrice` and pass it to the `gasPrice` property.
 
 ```html
-{{> dapp_selectGasPrice gas=21000 gasPrice=50000000000 unit="ether"}}
+{{> dapp_selectGasPrice gas=21000 gasPrice=50000000000 unit="puffs"}}
 ```
 
-_Note_: If you don't set the `unit` property it will use `EthTools.getUnit()`, like the `{{> dapp_formatBalance}}` element.
+_Note_: If you don't set the `unit` property it will use `PuffsTools.getUnit()`, like the `{{> dapp_formatBalance}}` element.
 
 **Getting values reactively**
 
