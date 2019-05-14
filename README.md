@@ -192,7 +192,7 @@ TemplateVar.getFrom('.my-container-element .dapp-select-account', 'value');
 
 ### Gas price selection
 
-![select gas price](https://raw.githubusercontent.com/puffscoin/meteor-package-elements/master/screenshots/selectGasPrice.png?1)
+select gas price (https://raw.githubusercontent.com/puffscoin/meteor-package-elements/master/screenshots/selectGasPrice.png?1)
 
 This element allows you users to adjust the fee (gas \* gas price) of a transaction, and gives you back either the `gasInWei` or the selected `gasPrice`.
 
