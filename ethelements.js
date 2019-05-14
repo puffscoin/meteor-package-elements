@@ -5,9 +5,9 @@ Template Controllers
 */
 
 /**
-Helper elements for ethereum dapps
+Helper elements for puffscoin dapps
 
-@class [packages] ethereum:elements
+@class [packages] puffscoin:elements
 @constructor
 */
 
