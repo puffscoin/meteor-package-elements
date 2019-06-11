@@ -4,8 +4,6 @@ A collection of basic Meteor templates/components to make dapps faster to build.
 
 Its recommended to use these elements along with the [Ðapp styles](https://github.com/puffscoin/dapp-styles).
 
-You can find a [demo here](http://ethereum-elements.meteor.com).
-
 ## Installation
 
     $ meteor add puffscoin:elements
@@ -196,7 +194,7 @@ select gas price (https://raw.githubusercontent.com/puffscoin/meteor-package-ele
 
 This element allows you users to adjust the fee (gas \* gas price) of a transaction, and gives you back either the `gasInWei` or the selected `gasPrice`.
 
-You need to provide a gas estimation which you can get using e.g. `web3.eth.estimateGas({from: .., to: .., data: ..})` or `myContract.myMethod.estimateGas({from: ..})`
+You need to provide a gas estimation which you can get using e.g. `web3.puffs.estimateGas({from: .., to: .., data: ..})` or `myContract.myMethod.estimateGas({from: ..})`
 and the tool will display whats the current medium gas price based on the given `gasPrice` \* your gas usage estimation.
 
 The user then can adjust the fee up and down by a factor of ~1.8.
@@ -291,8 +289,6 @@ PuffsElements.Modal.hide();
 
 ### Modal Question
 
-![modal_question](https://raw.githubusercontent.com/ethereum/meteor-package-elements/master/screenshots/modal_question.png?2)
-
 The question modal is a modal content template, which can be used to display a text and allow OK and Cancel options.
 
 You basically just can pass a `text`, `ok` and/or `cancel` property as a data context to set callbacks, which will be fired when the button is pressed.
@@ -334,7 +330,7 @@ PuffsElements.Modal.question({
 #### Close question modal
 
 ```js
-EthElements.Modal.hide();
+PuffsElements.Modal.hide();
 ```
 
 Additional you can pass the same options as the modal as the second parameter:
