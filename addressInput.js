@@ -299,7 +299,7 @@ var ensAddress = "0x314159265dd8dbb310642f98f50c066173c1259b";
 function getAddr(name, ens, template, callback) {
   TemplateVar.set(template, "ensLoading", true);
 
-  var resolverContract = new web3.eth.Contract(resolverContractAbi);
+  var resolverContract = new web3.puffs.Contract(resolverContractAbi);
 
   var node = namehash(name);
   // get a resolver address for that name
@@ -336,7 +336,7 @@ function getAddr(name, ens, template, callback) {
 function getName(address, ens, template, callback) {
   TemplateVar.set(template, "ensLoading", true);
 
-  var resolverContract = new web3.eth.Contract(resolverContractAbi);
+  var resolverContract = new web3.puffs.Contract(resolverContractAbi);
   var node = namehash(
     address.toLowerCase().replace("0x", "") + ".addr.reverse"
   );
@@ -382,7 +382,7 @@ Template.dapp_addressInput.onCreated(function() {
     TemplateVar.set("value", this.data.value);
   }
 
-  var ensContract = new web3.eth.Contract(ensContractAbi, ensAddress);
+  var ensContract = new web3.puffs.Contract(ensContractAbi, ensAddress);
 
   if (Session.get("network") === "main") {
     TemplateVar.set(template, "ensContract", ensContract);
@@ -391,10 +391,10 @@ Template.dapp_addressInput.onCreated(function() {
     TemplateVar.set(template, "ensAvailable", false);
   }
 
-  web3.eth.isSyncing(function(err, syncing) {
+  web3.puffs.isSyncing(function(err, syncing) {
     if (!err && !syncing) {
       // cannot use ENS while syncing
-      web3.eth.getCode(ensAddress, function(err, code) {
+      web3.puffs.getCode(ensAddress, function(err, code) {
         if (!err && code.length > 2) {
           // check if there's code on the address
           TemplateVar.set(template, "ensAvailable", true);
@@ -520,8 +520,8 @@ Template.dapp_addressInput.events({
       }
       e.currentTarget.value = value;
     } else if (TemplateVar.get("ensAvailable")) {
-      if (value.slice(-4) !== ".eth") {
-        value = value + ".eth";
+      if (value.slice(-4) !== ".puffs") {
+        value = value + ".puffs";
       }
 
       TemplateVar.set("hasName", false);
